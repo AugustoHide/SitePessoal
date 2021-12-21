@@ -29282,7 +29282,7 @@ li.active > a.u-button-style.u-button-style.u-border-active-grey-dark-2 {
 }
 .u-button-style.u-border-grey-dark-1:hover,
 .u-button-style.u-border-grey-dark-1:focus {
-  border-color: transparent !important;
+  border-color: #454545 !important;
   color: #3e3e3e !important;
   background-color: transparent !important;
 }
