@@ -13,8 +13,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'html');
 
-app.get("*", function (request, response) {
-    response.redirect("https://" + request.headers.host + request.url);
+app.use(function (request, response) {
+    if (!request.secure) {
+        response.redirect("https://" + request.headers.host + request.url);
+    }
 });
 
 
