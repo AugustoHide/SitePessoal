@@ -1,5 +1,3 @@
-const AmpOptimizer = require('@ampproject/toolbox-optimizer');
-const ampOptimizer = AmpOptimizer.create();
 const express = require('express');
 const app = express();
 
@@ -25,12 +23,16 @@ app.use((req, res, next) => { //Cria um middleware onde todas as requests passam
 
 
 app.get('/', (req, res) => {
-    const locals = { title: 'Express with AMP Optimizer' };
-    res.render('PaginaInicial', locals, async (err, html) => {
-        const optimizedHtml = await ampOptimizer.transformHtml(html);
-        res.send(optimizedHtml);
-    });
-})
+    res.render('PaginaInicial');
+});
+
+// app.get('/', (req, res) => {
+//     const locals = { title: 'Express with AMP Optimizer' };
+//     res.render('PaginaInicial', locals, async (err, html) => {
+//         const optimizedHtml = await ampOptimizer.transformHtml(html);
+//         res.send(optimizedHtml);
+//     });
+// })
 
 
 const port = process.env.PORT || 3000;
