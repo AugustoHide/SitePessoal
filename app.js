@@ -1,3 +1,5 @@
+const AmpOptimizer = require('@ampproject/toolbox-optimizer');
+const ampOptimizer = AmpOptimizer.create();
 const express = require('express');
 const app = express();
 
@@ -23,7 +25,11 @@ app.use((req, res, next) => { //Cria um middleware onde todas as requests passam
 
 
 app.get('/', (req, res) => {
-    res.render('PaginaInicial');
+    const locals = { title: 'Express with AMP Optimizer' };
+    res.render('PaginaInicial', locals, async (err, html) => {
+        const optimizedHtml = await ampOptimizer.transformHtml(html);
+        res.send(optimizedHtml);
+    });
 })
 
 
