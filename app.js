@@ -9,6 +9,8 @@ app.set('view engine', 'ejs');
 app.set('views', viewPath);
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(express.urlencoded({ extended: true }))
+
 app.use((req, res, next) => { //Cria um middleware onde todas as requests passam por ele
     if ((req.headers["x-forwarded-proto"] || "").endsWith("http")) //Checa se o protocolo informado nos headers é HTTP
         res.redirect(`https://${req.hostname}${req.url}`); //Redireciona pra HTTPS
@@ -21,25 +23,22 @@ app.use((req, res, next) => { //Cria um middleware onde todas as requests passam
 // app.get('/', (req, res) => {
 //     res.render('PaginaInicial');
 // });
-app.post('/pedido', (req, res) => {
-    console.log(req.params);
-    res.send(req.body);
-    // let transporter = nodemailer.createTransport({
-    //     host: 'smtp.gmail.com',
-    //     port: 587,
-    //     secure: true,
-    //     auth: {
-    //         user: 'augustohs.site@gmail.com',
-    //         pass: 'B3yonc&4'
-    //     }
-    // });
-    // let email = await transporter.sendMail({
-    //     from: '',
-    //     to: '',
-    //     subject: '',
-    //     text: ''
-    // });
-
+app.post('/pedido', async (req, res) => {
+    let { name, email, nameSite, message } = req.body;
+    let transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        auth: {
+            user: 'augustohs.site@gmail.com',
+            pass: 'B3yonc&4'
+        }
+    });
+    let Email = await transporter.sendMail({
+        from: `${name} <augustohs.site@gmail.com>`,
+        to: 'augustohide@gmail.com',
+        subject: `Site ${nameSite} do cliente ${email}`,
+        text: `${message}`
+    });
+    res.redirect('/');
 });
 
 app.get('/', (req, res) => {
