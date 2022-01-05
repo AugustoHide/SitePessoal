@@ -34390,6 +34390,7 @@ a.u-button-style.u-button-style.active > .u-text-active-grey-light-3[class*="u-b
 a.u-link.u-text-hover-grey-light-3:hover {
   color: #f6f6f6 !important;
 }
+
 .u-text-white,
 a.u-button-style.u-text-white,
 a.u-button-style.u-text-white[class*="u-border-"] {
@@ -35239,6 +35240,10 @@ a.u-button-style.u-button-style.active > .u-text-active-grey-90[class*="u-border
 }
 a.u-link.u-text-hover-grey-90:hover {
   color: #1a1a1a !important;
+}
+.u-text-yellowBrown{
+  color: #ff0 !important;
+  text-shadow: 2px 2px 2px black;
 }
 /*end-variables colors*/
 

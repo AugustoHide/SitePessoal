@@ -1,5 +1,4 @@
-const AmpOptimizer = require('@ampproject/toolbox-optimizer');
-const ampOptimizer = AmpOptimizer.create();
+const nodemailer = require('nodemailer');
 const express = require('express');
 const app = express();
 
@@ -9,11 +8,6 @@ const viewPath = path.join(__dirname, '/views');
 app.set('view engine', 'ejs');
 app.set('views', viewPath);
 app.use(express.static(path.join(__dirname, 'public')));
-// const cons = require('consolidate');
-
-// app.engine('html', cons.swig)
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'html');
 
 app.use((req, res, next) => { //Cria um middleware onde todas as requests passam por ele
     if ((req.headers["x-forwarded-proto"] || "").endsWith("http")) //Checa se o protocolo informado nos headers é HTTP
@@ -27,14 +21,32 @@ app.use((req, res, next) => { //Cria um middleware onde todas as requests passam
 // app.get('/', (req, res) => {
 //     res.render('PaginaInicial');
 // });
+app.post('/pedido', (req, res) => {
+    console.log(req.params);
+    res.send(req.body);
+    // let transporter = nodemailer.createTransport({
+    //     host: 'smtp.gmail.com',
+    //     port: 587,
+    //     secure: true,
+    //     auth: {
+    //         user: 'augustohs.site@gmail.com',
+    //         pass: 'B3yonc&4'
+    //     }
+    // });
+    // let email = await transporter.sendMail({
+    //     from: '',
+    //     to: '',
+    //     subject: '',
+    //     text: ''
+    // });
+
+});
 
 app.get('/', (req, res) => {
-    const locals = { title: 'Express with AMP Optimizer' };
-    res.render('PaginaInicial', locals, async (err, html) => {
-        const optimizedHtml = await ampOptimizer.transformHtml(html);
-        res.send(optimizedHtml);
-    });
+    res.render('PaginaInicial');
 })
+
+
 
 
 const port = process.env.PORT || 3000;
