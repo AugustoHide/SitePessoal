@@ -20,9 +20,13 @@ app.use((req, res, next) => { //Cria um middleware onde todas as requests passam
 
 
 
+app.get('/estilo', (req, res) => {
+    res.render('peca-seu-site');
+});
+
 app.get('/', (req, res) => {
-    res.send('Site em manutenção entre mais tarde');
-})
+    res.render('peca-seu-site');
+});
 
 
 

@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+}
+
+#cta-1 {
+    background-color: black;
+}
+
+#cta-1-content {
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#cta-1-img {
+    width: 50%;
+    height: 100%;
+
+    background-image: url('../img/cta1.jpg');
+    background-size: cover;
+}
+
+#cta-1-txt {
+    width: 50%;
+
+    font-family: 'Playfair Display', serif;
+    font-size: larger;
+    color: white;
+}
+
+.cta-1-txt-content {
+    padding: 5%;
+}
+
+#cta-2-txt-content {
+    text-align: center;
+}
+
+.cta-1-title {
+    font-size: 50px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.07rem;
+}
+
+.cta-2-subtitle {
+    font-size: 1.125rem;
+}
+
+#cta-2-subtitle {
+    font-size: 1.5rem;
+}
+
+.cta-btn-div {
+    margin: 1rem;
+    margin-left: 0%;
+}
+
+.cta-btn {
+    background-color: #055190;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    padding: 0.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.cta-btn-black {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    padding: 0.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+#cta-btn-big {
+    font-size: 1.5rem;
+    padding: 0.75rem;
+}
+
+#cta-2 {
+    background-color: #055190;
+}
+
+/* ----------------------- CTA-2 ----------------------- */
+
+
+/* ----------------------- Valores ----------------------- */
+.valores-header {
+    text-align: center;
+    background-color: #002134;
+    color: white;
+}
+
+.vantagens {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin: 2rem;
+}
+
+.val-content {
+    height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5rem 0;
+}
+
+.val-img {
+    width: 49%;
+
+    height: 100%;
+    background-size: cover;
+}
+
+#val-visibilidade {
+    background-image: url('../img/valVisibilidade.jpg');
+}
+
+#val-credibilidade {
+    background-image: url('../img/valCredibilidade.jpg');
+}
+
+#val-cliente {
+    background-image: url('../img/valCliente.jpg');
+}
+
+#val-esforco {
+    background-image: url('../img/valEsforco.jpg');
+}
+
+.val-txt {
+    width: 50%;
+
+    color: black;
+
+    font-family: 'Bebas Neue', cursive;
+}
+
+.val-txt-content {
+    padding: 5%;
+    font-family: 'Roboto Slab', serif;
+}
+
+.val-title {
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.val-subtitle {
+    font-size: 1.5rem;
+    font-family: 'Roboto Slab', serif;
+}
+
+.val-description {
+    font-weight: 500;
+    font-family: 'Roboto Slab', serif;
+}
