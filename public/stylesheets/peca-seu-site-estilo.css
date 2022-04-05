@@ -284,3 +284,99 @@ body {
         padding: 1rem;
     }
 }
+
+/* ---------------- Cursos --------------- */
+.cursos {
+    background-color: #000;
+}
+
+.cursos-header {
+    color: white;
+    padding: 3rem;
+    padding-bottom: 0;
+}
+
+.cursos-content {
+    min-height: 30vh;
+    height: auto;
+
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.curso {
+    width: 21.125rem;
+}
+
+.curso-content {
+    min-height: 30rem;
+    height: auto;
+
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+    border-radius: 7.5%/5%;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0px 0px 7px grey;
+
+}
+
+.curso-img {
+    height: 12.5rem;
+    width: 100%;
+
+    background-size: cover;
+    background-position: 50% 70%;
+}
+
+#theWebDev {
+    background-image: url('../img/theWebDevBootcamp.jpg');
+}
+
+#googleAds {
+    background-image: url('../img/GoogleAds.jpg');
+}
+
+#completoDeDes {
+    background-image: url('../img/CursoCompletoDeDesWeb.jpg');
+}
+
+#ux {
+    background-image: url('../img/UX.jpg');
+}
+
+.curso-txt {
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.9rem;
+}
+
+.curso-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.curso-subtitle {
+    font-weight: 700;
+}
+
+.curso-description {
+    font-family: 'Roboto Slab', serif;
+}
+
+.big {
+    font-size: 3rem;
+}
+
+.center {
+    text-align: center;
+}
