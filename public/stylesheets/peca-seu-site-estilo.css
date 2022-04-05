@@ -150,7 +150,7 @@ body {
 }
 
 .val-img {
-    width: 49%;
+    width: 50%;
     background-position: 50% 50%;
 
     height: auto;
@@ -220,5 +220,67 @@ body {
 
     .val-txt {
         width: 100%;
+    }
+}
+
+/* --------------- QUEM SOU --------------- */
+.quem-content {
+    min-height: 30vh;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 4rem 0;
+}
+
+.quem-foto {
+    width: 20%;
+
+    background-image: url('../img/rosto.jpg');
+    background-size: cover;
+    background-position: 50% 70%;
+    border-radius: 100%;
+
+    min-height: 15rem;
+}
+
+.quem-txt {
+    width: 60%;
+    padding: 1rem;
+    font-family: 'Roboto Slab', serif;
+}
+
+.quem-title {
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.quem-subtitle {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .quem-foto {
+        width: 40%;
+    }
+
+    .quem-txt {
+        width: 50%;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .quem-foto {
+        width: 80%;
+        min-height: 25rem;
+    }
+
+    .quem-txt {
+        width: 80%;
+        padding: 1rem;
     }
 }
