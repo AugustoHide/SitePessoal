@@ -7,19 +7,22 @@ body {
 }
 
 #cta-1-content {
-    height: 80vh;
+    height: auto;
+    min-height: 80vh;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
 #cta-1-img {
     width: 50%;
-    height: 100%;
+    min-height: 80vh;
 
     background-image: url('../img/cta1.jpg');
     background-size: cover;
+    background-position: 50% 50%;
 }
 
 #cta-1-txt {
@@ -66,6 +69,7 @@ body {
     font-weight: 700;
     font-size: 1rem;
     font-family: 'Playfair Display', serif;
+    margin: 0.1rem;
 }
 
 .cta-btn-black {
@@ -77,6 +81,7 @@ body {
     font-weight: 700;
     font-size: 1rem;
     font-family: 'Playfair Display', serif;
+    margin: 0.1rem;
 }
 
 #cta-btn-big {
@@ -88,8 +93,22 @@ body {
     background-color: #055190;
 }
 
-/* ----------------------- CTA-2 ----------------------- */
+@media (max-width: 576px) {
+    #cta-1-content {
+        min-height: auto;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('../img/cta1.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+    }
 
+    #cta-1-txt {
+        width: 70%;
+    }
+
+    #cta-1-img {
+        display: none;
+    }
+}
 
 /* ----------------------- Valores ----------------------- */
 .valores-header {
@@ -106,18 +125,20 @@ body {
 }
 
 .val-content {
-    height: 60vh;
+    height: auto;
+    min-height: 60vh;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     margin: 5rem 0;
 }
 
 .val-img {
     width: 49%;
+    background-position: 50% 50%;
 
-    height: 100%;
+    height: auto;
     background-size: cover;
 }
 
@@ -163,4 +184,26 @@ body {
 .val-description {
     font-weight: 500;
     font-family: 'Roboto Slab', serif;
+}
+
+@media (min-width: 605px) and (max-width: 768px) {
+    .val-img {
+        height: 60vh;
+        margin-top: 5%;
+    }
+}
+
+@media (max-width: 604px) {
+    #invert {
+        flex-direction: column-reverse;
+    }
+
+    .val-img {
+        height: 60vh;
+        width: 100%;
+    }
+
+    .val-txt {
+        width: 100%;
+    }
 }
