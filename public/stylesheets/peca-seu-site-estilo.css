@@ -414,3 +414,28 @@ body {
 .center {
     text-align: center;
 }
+
+
+
+
+
+#footer {
+    width: 100%;
+    background-color: #002134;
+    color: #055190;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-content {
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+    text-decoration: none;
+}
+
+.f-content a {
+    text-decoration: none;
+    color: #055190;
+}
