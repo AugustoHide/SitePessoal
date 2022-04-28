@@ -296,6 +296,15 @@ body {
     font-size: 1.5rem;
 }
 
+.quem-description {
+    padding-top: .5rem;
+}
+
+.contato {
+    color: black;
+    margin-right: 1rem;
+}
+
 @media (max-width: 768px) {
     .quem-foto {
         width: 40%;
